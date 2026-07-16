@@ -1,0 +1,444 @@
+*{
+    box-sizing:border-box;
+}
+
+
+body{
+
+    margin:0;
+
+    font-family:Arial, Helvetica, sans-serif;
+
+    background:white;
+
+    color:#222;
+
+}
+
+
+
+/* APP */
+
+.app{
+
+    display:flex;
+
+    height:100vh;
+
+}
+
+
+
+/* SIDEBAR */
+
+.sidebar{
+
+    width:280px;
+
+    background:#f7f7f8;
+
+    border-right:1px solid #ddd;
+
+    padding:15px;
+
+    display:flex;
+
+    flex-direction:column;
+
+}
+
+
+
+.logo{
+
+    font-size:24px;
+
+    font-weight:bold;
+
+    text-align:center;
+
+    padding:15px;
+
+}
+
+
+
+#newChat{
+
+    padding:14px;
+
+    border:none;
+
+    border-radius:12px;
+
+    background:#111;
+
+    color:white;
+
+    font-size:16px;
+
+    cursor:pointer;
+
+}
+
+
+
+#newChat:hover{
+
+    opacity:0.8;
+
+}
+
+
+
+
+
+/* TAB CHAT */
+
+#chatTabs{
+
+    margin-top:15px;
+
+    overflow-y:auto;
+
+}
+
+
+
+.chat-tab{
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    padding:12px;
+
+    margin-bottom:8px;
+
+    border-radius:10px;
+
+    cursor:pointer;
+
+}
+
+
+
+.chat-tab:hover{
+
+    background:#e5e5e5;
+
+}
+
+
+
+.chat-tab.active{
+
+    background:#ddd;
+
+}
+
+
+
+.tab-menu{
+
+    font-size:20px;
+
+}
+
+
+
+
+
+/* MAIN */
+
+.main{
+
+    flex:1;
+
+    display:flex;
+
+    flex-direction:column;
+
+}
+
+
+
+
+
+.header{
+
+    height:65px;
+
+    border-bottom:1px solid #ddd;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    font-size:25px;
+
+    font-weight:bold;
+
+}
+
+
+
+
+
+/* CHAT BOX */
+
+#chatBox{
+
+    flex:1;
+
+    overflow-y:auto;
+
+    padding:25px;
+
+}
+
+
+
+
+
+.message{
+
+    max-width:75%;
+
+    padding:15px 18px;
+
+    border-radius:18px;
+
+    margin:12px 0;
+
+    line-height:1.5;
+
+    white-space:pre-wrap;
+
+}
+
+
+
+/* NGƯỜI DÙNG */
+
+.user-message{
+
+    background:#111;
+
+    color:white;
+
+    margin-left:auto;
+
+    border-bottom-right-radius:5px;
+
+}
+
+
+
+/* AI */
+
+.ai-message{
+
+    background:#eeeeee;
+
+    margin-right:auto;
+
+    border-bottom-left-radius:5px;
+
+}
+
+
+
+
+
+/* AI ĐANG NHẬP */
+
+.typing{
+
+    font-size:22px;
+
+    letter-spacing:5px;
+
+}
+
+
+
+
+
+/* ẢNH */
+
+#imagePreview{
+
+    padding:0 25px;
+
+}
+
+
+
+.preview{
+
+    position:relative;
+
+    display:inline-block;
+
+}
+
+
+
+.preview img{
+
+    width:130px;
+
+    height:130px;
+
+    object-fit:cover;
+
+    border-radius:15px;
+
+}
+
+
+
+.remove-image{
+
+    position:absolute;
+
+    top:-8px;
+
+    right:-8px;
+
+    width:28px;
+
+    height:28px;
+
+    border:none;
+
+    border-radius:50%;
+
+    background:red;
+
+    color:white;
+
+    cursor:pointer;
+
+}
+
+
+
+
+
+/* INPUT */
+
+.input-area{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:10px;
+
+    padding:15px 25px;
+
+    border-top:1px solid #ddd;
+
+}
+
+
+
+
+
+.image-btn{
+
+    font-size:28px;
+
+    cursor:pointer;
+
+}
+
+
+
+
+
+#messageInput{
+
+    flex:1;
+
+    height:55px;
+
+    border-radius:30px;
+
+    border:1px solid #ccc;
+
+    padding:0 20px;
+
+    font-size:16px;
+
+    outline:none;
+
+}
+
+
+
+#messageInput:focus{
+
+    border-color:#111;
+
+}
+
+
+
+
+
+#sendBtn{
+
+    height:55px;
+
+    padding:0 25px;
+
+    border:none;
+
+    border-radius:30px;
+
+    background:#111;
+
+    color:white;
+
+    font-size:16px;
+
+    cursor:pointer;
+
+}
+
+
+
+#sendBtn:hover{
+
+    opacity:0.8;
+
+}
+
+
+
+
+/* MOBILE */
+
+@media(max-width:700px){
+
+    .sidebar{
+
+        width:200px;
+
+    }
+
+
+    .message{
+
+        max-width:85%;
+
+    }
+
+}
